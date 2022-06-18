@@ -107,13 +107,25 @@ ul {
   height: 100%;
   width: 150%;
   background: #445261;
-  -webkit-transform: skew(15deg);
-  -moz-transform: skew(15deg);
-  transform: skew(15deg);
+  -webkit-transform: skew(10deg);
+  -moz-transform: skew(10deg);
+  transform: skew(10deg);
   z-index: 100;
 }
 
 .bg-color {
   background-color: transparent;
   border: 0;
+}
+
+/* Login page */
+
+.link {
+  color: #17a2b8;
+}
+
+.link:hover,
+.link:active {
+  color: #a78471;
+  text-decoration: none;
 }
