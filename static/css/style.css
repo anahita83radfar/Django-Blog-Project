@@ -27,66 +27,6 @@ ul {
 .site-header .navbar-nav .nav-link.active {
   font-weight: 500;
 }
-  
-.content-section {
-  background: #ffffff;
-  padding: 20px 30px;
-  border: 1px solid #dddddd;
-  border-radius: 3px;
-  margin-bottom: 20px;
-}
-  
-.article-title {
-  color: #444444;
-}
-  
-a.article-title:hover {
-  color: #428bca;
-  text-decoration: none;
-}
-  
-.article-content {
-  white-space: pre-line;
-}
-  
-.article-img {
-  height: 65px;
-  width: 65px;
-  margin-right: 16px;
-}
-  
-.article-metadata {
-  padding-bottom: 1px;
-  margin-bottom: 4px;
-  border-bottom: 1px solid #e3e3e3
-}
-  
-.article-metadata a,
-.card-text {
-  color: #17a2b8;
-}
-
-.article-metadata a:hover {
-  color: #333333;
-  text-decoration: none;
-}
-  
-.article-svg {
-  width: 25px;
-  height: 25px;
-  vertical-align: middle;
-}
-  
-.account-img {
-  height: 125px;
-  width: 125px;
-  margin-right: 20px;
-  margin-bottom: 16px;
-}
-  
-.account-heading {
-  font-size: 2.5rem;
-}
 
 .footer a {
   color: #b9cad5;
@@ -95,6 +35,9 @@ a.article-title:hover {
 .footer a:hover {
   color: #ffffff;
 }
+
+
+/* Index page */
 
 .pagination a {
   margin-left: 10px;
@@ -120,4 +63,57 @@ a.article-title:hover {
 
 .post-link p:hover {
   color: #666666;
+}
+
+
+/* Post_detail page */
+
+.post-title {
+  margin-top: 20%;
+  margin-left: 5%;
+  color: #ffffff;
+}
+
+.post-subtitle {
+  margin-left: 5%;
+  color: lightgray;
+}
+
+.masthead {
+  margin-top: 10px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  height: 33vh;
+  width: 100%;
+}
+
+.masthead-text {
+  background-color: #445261;
+  color: white;
+  position: relative;
+}
+
+.masthead-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.masthead-image:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 90%;
+  height: 100%;
+  width: 150%;
+  background: #445261;
+  -webkit-transform: skew(15deg);
+  -moz-transform: skew(15deg);
+  transform: skew(15deg);
+  z-index: 100;
+}
+
+.bg-color {
+  background-color: transparent;
+  border: 0;
 }
