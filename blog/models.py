@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.urls import reverse
+from django.utils.text import slugify
 
 # The code taken from the Code Institute Django3blog project
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -8,7 +10,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
     featured_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
@@ -23,6 +25,15 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def save(self):
+        slug = slugify(self.title)
+        self.slug = slug
+        super().save()
+    
+    def get_absolute_url(self):
+        print(self.pk, self.slug, self.title)
+        return reverse('post_detail', kwargs={'slug': self.slug})
 
     def number_of_likes(self):
         return self.likes.count()

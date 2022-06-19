@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<div class="col-md-8 mt-3 offset-md-2">
+    <form method="post">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Blog Post</legend>
+            {{ form|crispy }}
+        </fieldset>
+        <button class="btn btn-info right" type="submit">Post</button>
+    </form>
+</div>
+
+{% endblock %}
