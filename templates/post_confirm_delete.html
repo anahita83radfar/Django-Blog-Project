@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+
+<div class="col-md-8 mt-3 offset-md-2">
+    <form method="post">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend>Delete Post</legend>
+            <hr>
+            <h4>Are you sure you want to delete the post "{{ post.title }}"</h4>
+        </fieldset>
+        <button class="btn btn-outline-danger right" type="submit">Yes, Delete</button>
+        <a class="btn btn-outline-secondary btn-cancel right" href="{% url 'post_detail' post.slug %}">Cancel</a>
+    </form>
+</div>
+
+{% endblock %}

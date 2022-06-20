@@ -150,3 +150,9 @@ ul {
   border: none;
   background: transparent;
 }
+
+/* Post confirm delete page */
+
+.btn-cancel {
+  margin-left: 10px;
+}
