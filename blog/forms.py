@@ -6,6 +6,7 @@ from django.core.exceptions import ValidationError
 
 # The code taken from the Code Institute Django3blog project
 class CommentForm(forms.ModelForm):
+    
     class Meta:
         model = Comment
         fields = ('body',)
@@ -14,14 +15,15 @@ class CommentForm(forms.ModelForm):
 class PostForm(forms.ModelForm):
 
     class Meta:
-         model = Post
-         fields = ['title', 'content']
+        model = Post
+        fields = ['title', 'content']
 
-    def clean_title(self, title):
+    def clean_title(self):
+        data = self.cleaned_data['title']
 
-        slug = slugify(title)
+        slug = slugify(data)
 
         if Post.objects.filter(slug=slug).exists():
             raise ValidationError('A question with this title already exists.')
 
-        return title
+        return data

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Profile Page{% endblock title %}
+{% block content %}
+
+  <div class="masthead">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-md-6 masthead-text">
+                <h1 class="post-title">{{ user.username }}</h1>
+                <p class="post-subtitle">{{ user.email }}</p>
+                <p class="post-subtitle">{{user.profile.description}}</p>
+            </div>
+            <div class="d-none d-md-block col-md-6 masthead-image">
+                {% if "placeholder" in user.profile.featured_image.url %}
+                <img src="https://agilesearch.io/wp-content/uploads/2019/10/developers.jpg" width="100%">
+                {% else %}
+                <img src=" {{ user.profile.featured_image.url }}" width="100%">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+</div>
+{% endblock content %}

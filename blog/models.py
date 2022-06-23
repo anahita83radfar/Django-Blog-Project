@@ -26,10 +26,10 @@ class Post(models.Model):
     def __str__(self):
         return self.title
     
-    def save(self):
+    def save(self, *args, **kwargs):
         slug = slugify(self.title)
         self.slug = slug
-        super().save()
+        super().save(*args, **kwargs)
     
     def get_absolute_url(self):
         print(self.pk, self.slug, self.title)
@@ -52,3 +52,4 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+

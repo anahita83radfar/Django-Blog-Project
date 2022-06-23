@@ -9,13 +9,14 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import sys
 from pathlib import Path
 import os
 import dj_database_url
 from django.contrib.messages import constants as messages
 if os.path.isfile('env.py'):
     import env
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -52,6 +53,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'crispy_forms',
     'blog',
+    'users',
 ]
 
 SITE_ID = 1
@@ -113,9 +115,15 @@ WSGI_APPLICATION = 'developers_blog.wsgi.application'
 #     }
 # }
 
+#Default configuration
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
+    
+#Updates Database Configuration
+if 'test' in sys.argv or 'test_coverage' in sys.argv: #Covers regular testing and django-coverage
+    DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -159,6 +167,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Default primary key field type
