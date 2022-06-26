@@ -27,3 +27,4 @@ class PostForm(forms.ModelForm):
             raise ValidationError('A question with this title already exists.')
 
         return data
+

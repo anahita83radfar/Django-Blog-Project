@@ -53,3 +53,11 @@ class Comment(models.Model):
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
 
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    description = models.CharField(max_length=200)
+    featured_image = CloudinaryField('image', default='placeholder')
+
+    def __str__(self):
+        return f'{self.user.username} Profile'

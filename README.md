@@ -1,108 +1,153 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Developers Blog
 
-Welcome anahita83radfar,
+Developers Blog is a website for people and developers who are interested in communicating with each other. The website's goal is to build a community of developers to ask questions, learn, and share technical knowledge. This weblog empowers people to find what they need to develop technology at work or home.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The user of this website will be able to read and write the post, update and delete the post, leave comments on the post, and like the post. Through online registration, users can access their profiles.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Responsive page](/assets/images/readme/responsive.jpg)
 
-## Gitpod Reminders
+# Features
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- ## The Home Page
+- ### Navigation Bar
+  - Featured at the top of the page on all pages. The navigation bar includes links to the Logo, Home page, About page, Register page, Login page, Profile page, and New post page.
+  - The logo is the name of the website and by clicking on it the user redirect to the Home page.
+  - The navigation makes the different pages of the website easy to find. It is fully responsive and identical on each page to allow for easy navigation without having to revert to the previous page.
 
-`python3 -m http.server`
+  ![Navigation bar](/media/images/readme/nav.jpg)
 
-A blue button should appear to click: _Make Public_,
+- ### The Main Section
+  - The main section on the Home page is divided into different sections or a list of posts so that each section represents a specific post that is published by the users of the website.
+  - Each post section has an image with the post's author name, the title of the post,  excerpt, date of publication, and like's numbers underneath it. The user can access to the post's detail by clicking on the post's title or post excerpt.
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+  ![The Main section](/media/images/readme/main.jpg)
 
-A blue button should appear to click: _Make Public_,
+- ### The Footer
+  - The footer section includes the contact links to the relevant social media sites. 
+  - The social media links will open to a new tab to allow easy navigation for the user and the encourages user to keep connected via social media.
 
-Another blue button should appear to click: _Open Browser_.
+  ![The Footer](/media/images/readme/footer.jpg)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- ### The About Page
+  - This page provides general information about this website to the user.
 
-To log into the Heroku toolbelt CLI:
+  ![The About page](/media/images/readme/about.jpg)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- ### The Sign-Up Page
+  - This page will allow the user to get signed up to the website. The user will be asked to submit their full name, email address, and password.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+  ![The Sign up page](/media/images/readme/signup.jpg)
 
-------
+- ### The login Page
+  - This page will allow the user to get login to the website if already has been registerd.
 
-## Release History
+  ![The login page](/media/images/readme/signin.jpg)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- ### The Profile Page
+  - This page will demostrate the user's info such as name and email's adress.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+  ![The profile page](/media/images/readme/profile.jpg)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- ### The New Post Page
+  - This page allow the user to create a new post by compliting a form with different sections such as title, excerpt, content and status.
+  - By creating a new post the user redirect to the post detail page.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+  ![The New Post page](/media/images/readme/new.jpg)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- ### The Post Detail Page
+  - The user can acsess to this page by clicking on the post's title or post's excerpt on the Home page. Also by creating a new post the user redirect to this page.
+  - This page allows the user to read, update and delete the post, leave the comment and like the post.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+  ![The Post Detail page](/media/images/readme/detail-content.jpg)
+  ![The Post Detail page](/media/images/readme/detail-comment.jpg)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- ### The Post Update Page
+  - The user can acsess to this page by clicking on the update's button on the Post Detail page. By clicking opens the post form with last context so as the user can update it and redirect to the updated post.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+  ![The Post Detail page](/media/images/readme/update.jpg)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- ### The Post Delete Page
+  - The user can acsess to this page by clicking on the delete's button on the Post Detail page. By clicking opens the confirm delete page which asks if the user is sure to delete the post permanently or wants to cancel it. By clicking cancel button the user redirect to the Post Detail page.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+  ![The Post Detail page](/media/images/readme/delete.jpg)
+  
+# Data Model
+   This diagram shows the different components of the website. The website is divided into different sections, authentication, creation post, access, and read created posts.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+   ![Diagram](/media/images/readme/diagram.jpg)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+# Design
+- ### Sketch wireframes used in making the website mockup.
+  - The Home page
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+    ![The Home page wireframe](/media/images/readme/home-page.jpg)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+  - The Post Detail page
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+    ![The Post Detail page wireframe](/media/images/readme/post-detail.jpg)
 
-------
+  - The About page
 
-## FAQ about the uptime script
+    ![The About page wireframe](/media/images/readme/about-page.jpg)
 
-**Why have you added this script?**
+  - The Sign Up page
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+    ![The Sign Up page wireframe](/media/images/readme/register-page.jpg)
 
-**How will this affect me?**
+  - The Sign In page
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+    ![The Sign In page wireframe](/media/images/readme/login-page.jpg)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+  - The Sign Out page
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+    ![The Sign Out page wireframe](/media/images/readme/logout-page.jpg)
 
-**So….?**
+  - The Profile page
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+    ![The Profile page wireframe](/media/images/readme/profile-page.jpg)
 
-**Can I opt out?**
+  - The New Post page
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+    ![The New Post page wireframe](/media/images/readme/New-page.jpg)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+  - The Post Update page
 
-**Anything more?**
+    ![The Post Update page wireframe](/media/images/readme/update-page.jpg)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+  - The Post Delete page
 
----
+    ![The Post Delete page wireframe](/media/images/readme/delete-page.jpg)
 
-Happy coding!
+- ### Database Model
+
+  ![Diagram](/media/images/readme/database.jpg)
+
+
+
+# Testing
+
+- This website is responsive for different devices such as desktop pc, tablets, and mobile. It functions on all standard screen sizes using the Chrome Dev Tools device toolbar.
+
+- Different parts of the website such as header, footer, the main section, about page, sign up, login, profile, new post and post detail page all are easy to understand and readable.
+
+- Manual test case template
+
+  ![Manual test case template](/media/images/readme/Manual-Test-Case-Template.jpg)
+
+### Validator Testing
+
+
+
+# Deployment
+This project was deployed to Heroku.
+- Steps for deployment:
+  - Create a Virtual Environment
+  - Install Project Dependencies
+  - Update Local Database Schema
+  - Run a Local Development Server
+  - Fork or clone this repository
+  - Create a new Heroku app
+  - Update Remote Database Schema
+  - Link the Heroku app to the repository
+  - Click on **Deploy**

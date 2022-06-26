@@ -2,8 +2,10 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from .models import Post
+from .models import Post, Profile
 from .forms import CommentForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
 
 # The code taken from the Code Institute Django3blog project
@@ -11,7 +13,7 @@ class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "index.html"
-    paginate_by = 6
+    paginate_by = 3
 
 
 class PostDetail(View):
@@ -91,7 +93,7 @@ class PostCreate(LoginRequiredMixin, generic.CreateView):
 
 class PostUpdate(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateView):
     model = Post
-    fields = ['title', 'excerpt','content', 'status']
+    fields = ['title', 'excerpt', 'content', 'status']
     template_name = "post_form.html"
     
     def form_valid(self, form):
@@ -115,6 +117,14 @@ class PostDelete(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
         if self.request.user == post.author:
             return True
         return False
+
+
+@login_required
+def profile(request):
+    context = {
+        'profile': Profile.objects.all()
+    }
+    return render(request, 'profile.html', context)
 
 
 def about(request):

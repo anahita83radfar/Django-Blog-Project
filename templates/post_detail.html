@@ -1,4 +1,4 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 
 {% block content %}
 
@@ -37,20 +37,22 @@
                             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                        class="fas fa-heart"></i></button>
                                 {% else %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                        class="far fa-heart"></i></button>
                                 {% endif %}
                             </form>
                             {% else %}
                             <span>
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
-                            {% endif %}
-                            <span class="text-secondary">{{ post.number_of_likes }}</span>
+                                <span class="text-secondary"><i class="far fa-heart"></i></span>
+                                {% endif %}
+                                <span class="text-secondary">{{ post.number_of_likes }}</span>
                             </span>
                         </strong>
                     </div>
-                    
+
                     <div class="col-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
@@ -64,7 +66,8 @@
 
     <div>
         <a class="btn btn-outline-info btn-sm mt-1 mb-1" href="{% url 'post_update' post.slug %}">Update</a>
-        <a class="btn btn-outline-danger btn-sm mt-1 mb-1" style="margin-left: 10px;" href="{% url 'post_delete' post.slug %}">Delete</a>
+        <a class="btn btn-outline-danger btn-sm mt-1 mb-1" style="margin-left: 10px;"
+            href="{% url 'post_delete' post.slug %}">Delete</a>
     </div>
 
     <div class="row">
@@ -89,7 +92,7 @@
                 {% endfor %}
             </div>
         </div>
-        
+
         <div class="col-md-4 card mb-4  mt-3 bg-color">
             <div class="card-body">
                 {% if commented %}

@@ -40,4 +40,19 @@ class TestPostForm(TestCase):
     def test_post_form_is_valid(self):
         form = PostForm({'title': 'Post', 'content': 'Post content'})
         self.assertTrue(form.is_valid())
-    
+        
+    # def test_clean_title(self):
+    #     title = 'Title'
+    #     form = PostForm({'title': title})
+    #     self.assertTrue(form.is_valid())
+    #     form.save()
+    #     form = PostForm({'title': title})
+    #     self.assertFalse(form.is_valid())
+    #     self.assertEqual(len(form.errors), 1)
+    #     self.assertEqual(form.errors['__all__'], ['A question with this title already exists.'])
+    #     form = PostForm({'title': title})
+    #     self.assertTrue(form.is_valid())
+    #     form.save()
+    #     form = PostForm({'title': title})
+    #     self.assertTrue(form.is_valid())
+        
