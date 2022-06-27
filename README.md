@@ -4,8 +4,8 @@ Developers Blog is a website for people and developers who are interested in com
 
 The user of this website will be able to read and write the post, update and delete the post, leave comments on the post, and like the post. Through online registration, users can access their profiles.
 
-![Responsive page](/media/images/readme/responsive-ipad.jpg)
-![Responsive page](/media/images/readme/responsive-mobile.jpg)
+ ![Responsive page](/media/images/readme/responsive-ipad.jpg)
+  ![Responsive page](/media/images/readme/responsive-mobile.jpg)
 
 # Features
 
@@ -113,7 +113,7 @@ The user of this website will be able to read and write the post, update and del
 
   - The New Post page
 
-    ![The New Post page wireframe](/media/images/readme/New-page.jpg)
+    ![The New Post page wireframe](/media/images/readme/new-page.jpg)
 
   - The Post Update page
 
@@ -162,8 +162,8 @@ The user of this website will be able to read and write the post, update and del
 
 ### Bugs
 #### Solved bugs
-- When I click on the like button on the post detail page a square box appeared around the heart icon. 
-- I fixed the problem by adding `button:focus {outline: none;}` on the style.css file.
+- When I clicked on the like button on the post detail page a square box appeared around the heart icon. 
+- I fixed the problem by adding this line of code `button:focus {outline: none;}` on the style.css file.
 
 
 # Deployment
@@ -179,11 +179,13 @@ This project was deployed to Heroku.
   - Link the Heroku app to the repository
   - Click on **Deploy**
 
+[Here is the live version of my project](https://developers-blog.onrender.com)
+
 # Credits
 ### Content
 - The icons in the footer, like and comment icon taken from [Font Awesome](https://fontawesome.com/)
 - The commented code in the project is taken from CI [Codestar](https://github.com/Code-Institute-Solutions/Django3blog/tree/master/12_final_deployment) project and [Specific YouTube Tutorial](https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p)
 
 ### Media
-- The photos used on the home page are from [Pexels](https://www.pexels.com/sv-se/sok/yoga/)
-- The posts content on the Home and the Post Detail page are from [Web.dev](https://www.pexels.com/sv-se/sok/yoga/)
+- The photos used on the home page are from [Pexels](https://www.pexels.com)
+- The posts content on the Home and the Post Detail page are from [Web.dev](https://web.dev/debug-web-vitals-in-the-field/)
