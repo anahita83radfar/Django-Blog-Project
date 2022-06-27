@@ -36,7 +36,7 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
-    
+
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
@@ -70,7 +70,7 @@ class PostDetail(View):
 
 
 class PostLike(View):
-    
+
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
@@ -79,13 +79,13 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-    
+
 
 class PostCreate(LoginRequiredMixin, generic.CreateView):
     model = Post
     fields = ['title', 'excerpt', 'content', 'status']
     template_name = "post_form.html"
-    
+
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
@@ -95,17 +95,17 @@ class PostUpdate(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateView):
     model = Post
     fields = ['title', 'excerpt', 'content', 'status']
     template_name = "post_form.html"
-    
+
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
-    
+
     def test_func(self):
         post = self.get_object()
         if self.request.user == post.author:
             return True
         return False
-    
+
 
 class PostDelete(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
     model = Post

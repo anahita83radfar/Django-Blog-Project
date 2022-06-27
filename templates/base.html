@@ -21,14 +21,16 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
+  <!-- Title -->
   {% if title %}
   <title>Developers Blog - {{ title }}</title>
   {% else %}
   <title>Developers Blog</title>
   {% endif %}
+
 </head>
 
-<body class="d-flex flex-column h-100 main-bg">
+<body class="d-flex flex-column h-100">
 
   <header class="site-header">
 
@@ -63,6 +65,7 @@
 
   </header>
 
+  <!-- The code taken from the Code Institute Django3blog project -->
   <div class="container">
     <div class="row">
       <div class="col-md-8 offset-md-2">
@@ -78,16 +81,18 @@
 
   <!-- Main -->
 
-  <main class="flex-shrink-0 main-bg">
+  <main class="flex-shrink-0">
 
     {% block content %}
     <!-- Content Goes here -->
     {% endblock content %}
+
   </main>
 
   <!-- Footer -->
 
   <footer class="footer mt-auto py-3 bg-steel">
+
     <p class="m-0 text-center text-white">Follow us:
       <a href="https://facebook.com" target="_blank" aria-label="Visit our Facebook page (opens in a new tab)"><i
           class="fab fa-facebook-square ml-3"></i></a>
@@ -98,6 +103,7 @@
       <a href="https://youtube.com" target="_blank" aria-label="Visit our YouTube page (opens in a new tab)"><i
           class="fab fa-youtube-square ml-3"></i></a>
     </p>
+
   </footer>
 
 
@@ -112,6 +118,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
   </script>
+
+  <!-- SetTimeout function for messages alert -->
   <script>
     setTimeout(function () {
       let messages = document.getElementById('msg');

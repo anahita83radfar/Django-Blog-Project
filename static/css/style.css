@@ -87,6 +87,11 @@ ul {
   color: lightgray;
 }
 
+button:focus {
+  outline: none;
+}
+
+/* The code taken from the Code Institute Django3blog project */
 .masthead {
   margin-top: 10px;
   overflow: hidden;
@@ -96,17 +101,20 @@ ul {
   width: 100%;
 }
 
+/* The code taken from the Code Institute Django3blog project */
 .masthead-text {
   background-color: #445261;
   color: white;
   position: relative;
 }
 
+/* The code taken from the Code Institute Django3blog project */
 .masthead-image {
   position: relative;
   overflow: hidden;
 }
 
+/* The code taken from the Code Institute Django3blog project */
 .masthead-image:after {
   content: "";
   position: absolute;
@@ -161,4 +169,8 @@ ul {
 
 .content-about {
   margin-bottom: 50px;
+}
+
+.slide {
+  margin-bottom: 40px;
 }

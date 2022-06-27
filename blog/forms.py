@@ -6,7 +6,7 @@ from django.core.exceptions import ValidationError
 
 # The code taken from the Code Institute Django3blog project
 class CommentForm(forms.ModelForm):
-    
+
     class Meta:
         model = Comment
         fields = ('body',)
@@ -27,4 +27,3 @@ class PostForm(forms.ModelForm):
             raise ValidationError('A question with this title already exists.')
 
         return data
-

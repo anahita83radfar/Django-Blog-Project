@@ -4,11 +4,11 @@ from django.apps import apps
 
 
 class PostModelTestCase(TestCase):
-    
+
     def setUp(self):
         user = User.objects.create_superuser(
-            username='admin', 
-            email='admin@gmail.com', 
+            username='admin',
+            email='admin@gmail.com',
             password='admin')
         self.post = Post.objects.create(
             title='Title',
@@ -27,6 +27,3 @@ class PostModelTestCase(TestCase):
         self.post.save()
         self.post.refresh_from_db()
         self.assertTrue(self.post.updated_on > old_post_updated_on)
-
-    
-

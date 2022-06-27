@@ -14,9 +14,9 @@
                         <div class="card-body">
                             {% if "placeholder" in post.featured_image.url %}
                             <img class="card-img-top"
-                                src="https://agilesearch.io/wp-content/uploads/2019/10/developers.jpg">
+                                src="https://images.pexels.com/photos/1181243/pexels-photo-1181243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1g" alt="Post placeholder image">
                             {% else %}
-                            <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                            <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="Post image">
                             {% endif %}
                             <div class="img-flash">
                                 <p class="author">Author: {{ post.author }}</p>
@@ -41,6 +41,8 @@
             </div>
         </div>
     </div>
+
+    <!-- The code taken from the Specific YouTube Tutorial -->
     {% if is_paginated %}
     <div class="pagination justify-content-center">
         {% if page_obj.has_previous %}
@@ -63,4 +65,5 @@
     </div>
     {% endif %}
 </div>
+
 {%endblock%}

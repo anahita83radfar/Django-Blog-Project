@@ -2,10 +2,11 @@
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Signup" %}{% endblock %}
+{% block head_title %}{% trans "Delete" %}{% endblock %}
 
 {% block content %}
 
+<!-- The code taken from the Specific YouTube Tutorial -->
 <div class="col-md-8 mt-3 offset-md-2">
     <form method="post">
         {% csrf_token %}

@@ -4,11 +4,15 @@ Developers Blog is a website for people and developers who are interested in com
 
 The user of this website will be able to read and write the post, update and delete the post, leave comments on the post, and like the post. Through online registration, users can access their profiles.
 
-![Responsive page](/assets/images/readme/responsive.jpg)
+![Responsive page](/media/images/readme/responsive-ipad.jpg)
+![Responsive page](/media/images/readme/responsive-mobile.jpg)
 
 # Features
 
 - ## The Home Page
+
+  ![Responsive page](/media/images/readme/home.jpg)
+
 - ### Navigation Bar
   - Featured at the top of the page on all pages. The navigation bar includes links to the Logo, Home page, About page, Register page, Login page, Profile page, and New post page.
   - The logo is the name of the website and by clicking on it the user redirect to the Home page.
@@ -123,8 +127,6 @@ The user of this website will be able to read and write the post, update and del
 
   ![Diagram](/media/images/readme/database.jpg)
 
-
-
 # Testing
 
 - This website is responsive for different devices such as desktop pc, tablets, and mobile. It functions on all standard screen sizes using the Chrome Dev Tools device toolbar.
@@ -137,6 +139,31 @@ The user of this website will be able to read and write the post, update and del
 
 ### Validator Testing
 
+- HTML
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org) (check by text input)
+
+- CSS
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator) (check by direct input)
+
+- JavaScript
+  - No errors were found when passing through the official  [Jshint validator](https://jshint.com/).
+    - The following metrics were returned for the play.js file:
+    - There is only one function in this file.
+    - It takes no arguments.
+    - This function contains 3 statements.
+    - Cyclomatic complexity number for this function is 1.
+
+- PEP8
+   - No errors were returned from PEP8online.com
+
+- Accessibility
+
+![Accessibility](/media/images/readme/accessibility.jpg)
+
+### Bugs
+#### Solved bugs
+- When I click on the like button on the post detail page a square box appeared around the heart icon. 
+- I fixed the problem by adding `button:focus {outline: none;}` on the style.css file.
 
 
 # Deployment
@@ -151,3 +178,12 @@ This project was deployed to Heroku.
   - Update Remote Database Schema
   - Link the Heroku app to the repository
   - Click on **Deploy**
+
+# Credits
+### Content
+- The icons in the footer, like and comment icon taken from [Font Awesome](https://fontawesome.com/)
+- The commented code in the project is taken from CI [Codestar](https://github.com/Code-Institute-Solutions/Django3blog/tree/master/12_final_deployment) project and [Specific YouTube Tutorial](https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p)
+
+### Media
+- The photos used on the home page are from [Pexels](https://www.pexels.com/sv-se/sok/yoga/)
+- The posts content on the Home and the Post Detail page are from [Web.dev](https://www.pexels.com/sv-se/sok/yoga/)

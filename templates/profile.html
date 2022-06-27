@@ -1,8 +1,10 @@
 {% extends "base.html" %}
+
 {% block title %}Profile Page{% endblock title %}
+
 {% block content %}
 
-  <div class="masthead">
+<div class="masthead">
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
@@ -11,13 +13,10 @@
                 <p class="post-subtitle">{{user.profile.description}}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                {% if "placeholder" in user.profile.featured_image.url %}
-                <img src="https://agilesearch.io/wp-content/uploads/2019/10/developers.jpg" width="100%">
-                {% else %}
-                <img src=" {{ user.profile.featured_image.url }}" width="100%">
-                {% endif %}
+                <img src="https://images.pexels.com/photos/1181243/pexels-photo-1181243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1g" alt="Profile image" style="width: 100%;">
             </div>
         </div>
     </div>
-    
+</div>
+
 {% endblock content %}

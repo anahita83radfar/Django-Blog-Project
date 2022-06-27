@@ -4,6 +4,7 @@
 
 {% load crispy_forms_tags %}
 
+<!-- The code taken from the Code Institute Django3blog project -->
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
@@ -13,15 +14,16 @@
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://agilesearch.io/wp-content/uploads/2019/10/developers.jpg" width="100%">
+                <img src="https://agilesearch.io/wp-content/uploads/2019/10/developers.jpg" alt="Post detail placeholder image" style="width: 100%;">
                 {% else %}
-                <img src=" {{ post.featured_image.url }}" width="100%">
+                <img src=" {{ post.featured_image.url }}" alt="Post detail image" style="width: 100%;">
                 {% endif %}
             </div>
         </div>
     </div>
 </div>
 
+<!-- Post content -->
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top bg-color">
@@ -45,6 +47,8 @@
                                 {% endif %}
                             </form>
                             {% else %}
+
+                            <!-- Like and comment -->
                             <span>
                                 <span class="text-secondary"><i class="far fa-heart"></i></span>
                                 {% endif %}
@@ -64,12 +68,14 @@
         </div>
     </div>
 
+    <!-- Update and Delete button -->
     <div>
         <a class="btn btn-outline-info btn-sm mt-1 mb-1" href="{% url 'post_update' post.slug %}">Update</a>
         <a class="btn btn-outline-danger btn-sm mt-1 mb-1" style="margin-left: 10px;"
             href="{% url 'post_delete' post.slug %}">Delete</a>
     </div>
 
+    <!-- Leave comment -->
     <div class="row">
         <div class="col">
             <hr>
@@ -96,7 +102,7 @@
         <div class="col-md-4 card mb-4  mt-3 bg-color">
             <div class="card-body">
                 {% if commented %}
-                <div class="alert alert-success" role="alert">
+                <div class="alert alert-success" id="msg" role="alert">
                     Your comment is awaiting approval
                 </div>
                 {% else %}
